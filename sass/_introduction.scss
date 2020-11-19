@@ -1,0 +1,119 @@
+.introduction{
+    grid-column: center-start / center-end ;
+    margin: 3.5rem 0 3rem;
+    display: grid;
+    //grid-template-columns: repeat(3, 1fr);
+    //grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 6rem;
+   // align-items: start;
+
+}
+
+.intro{
+    display: grid;
+    grid-template-columns: start-1 1fr [end-1 start-2] max-content [end-2 start-3] 1fr;
+    grid-row-columns: 1fr 1fr;
+    grid-row-gap: 0rem;
+    grid-column-gap: 2.5rem;
+
+    &__text {
+        grid-column: start-2 / end-2;
+
+         &--animated{
+            animation: moveInBottom .5s ease-out 1.3s;
+            animation-fill-mode: backwards;
+        }
+        
+        p {
+            font-family: 'Bellefair', serif;
+            font-weight: 400;
+            font-size: 2.5rem;
+            padding: 0 8rem 5rem;
+            color: $color-grey-light-2;
+
+             @media only screen and (max-width: $bp-medium) {
+                padding: 2rem 1rem 5rem;
+            }
+
+            @media only screen and (max-width: $bp-small) {
+                padding: 2rem 0 5rem;
+            }
+        }
+        span {
+            color: $color-primary;
+            font-size: 2.7rem;
+        }
+    }
+
+}
+
+//ABOUT
+
+.about{
+    grid-column: center-start / center-end ;
+    margin: 3rem 0 12rem;
+    display: grid;
+
+        @media only screen and (max-width: $bp-small) {
+                padding: 0 0 1rem;
+        }
+
+}
+
+.abt{
+    display: grid;
+    grid-template-columns: start-1 1fr [end-1 start-2] max-content [end-2 start-3] 1fr;
+    grid-row-columns: 1fr 1fr;
+    grid-row-gap: 0rem;
+    grid-column-gap: 2.5rem;
+
+    &__text {
+        grid-column: start-2 / end-2;
+        color: $color-grey-light-2;
+
+        p { 
+            font-family: 'Bellefair', serif;
+            font-weight: 400;
+            font-size: 2rem;
+            padding: 0 8rem 1rem;
+            -webkit-hyphens: auto;
+            hyphens: auto;    
+
+            @media only screen and (max-width: $bp-small) {
+                 font-family: 'Bellefair', serif;
+                 font-weight: 400;
+                 font-size: 2rem;
+                 padding: 15px 0rem 2rem;
+                 line-height: 2;
+                 margin-bottom: -1rem;
+            }
+        }
+        span {
+            color: $color-primary;
+            font-size: 2.7rem;
+        }
+
+        ol{
+            padding: 0 12rem 1rem;
+
+             @media only screen and (max-width: $bp-small) {
+                 padding: 0 3rem 1rem;
+            }
+        }
+
+        .about-item {
+            font-size: $font-sm;
+            color: $color-grey-light-2;
+            font-family: 'Bellefair', serif;
+            line-height: 2;
+            -webkit-hyphens: auto;
+            hyphens: auto;    
+
+        }
+
+        b, strong {
+            font-weight: bolder;
+            font-size: 2.2rem;
+        }
+    }
+}

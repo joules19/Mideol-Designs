@@ -1,0 +1,185 @@
+.footer{
+    background-color: $color-secondary;
+    grid-column: full-start / full-end;
+    padding: 8rem 8rem 1.5rem;
+
+    @media only screen and (max-width: $bp-small) {
+        text-align: center;
+    }
+
+    &-logo {
+        
+        @media only screen and (max-width: $bp-small) {
+            margin: 0 0 1rem;
+        }
+    }
+    p {
+        font-size: 1.5rem;
+        font-family: $font-secondary;
+        color: $color-grey-light-2;
+
+        // @media only screen and (max-width: $bp-medium) {
+        //     font-size: 1.7rem;
+        // }
+    }
+    h4 {
+        font-size: 2rem;
+        font-family: $font-display;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 2rem;
+            margin: 2rem 0;
+        }
+    }
+    .fa {
+
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        margin: 0rem 1rem;
+    }
+
+    .copyright{
+        text-align: center;
+        //margin-top: 1rem;
+    }
+}
+
+//FOOTER-PORTFOLIO
+.footer-portfolio {
+    background-color: #101d2c;
+    grid-column: full-start / full-end;
+    padding: 8rem 8rem 1.5rem;
+    margin-bottom: 0rem;
+    margin-top: 10rem;
+
+    @media only screen and (max-width: $bp-small) {
+        text-align: center;
+    }
+
+    &-logo {
+       
+    }
+  p {
+        font-size: 1.5rem;
+        font-family: $font-secondary;
+        color: $color-grey-light-2;
+
+        // @media only screen and (max-width: $bp-medium) {
+        //     font-size: 1.7rem;
+        // }
+    }
+    h4 {
+        font-size: 2rem;
+        font-family: $font-display;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 2rem;
+            margin: 2rem 0;
+        }
+    }
+    .fa {
+
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        margin: 0rem 1rem;
+    }
+       .copyright{
+        text-align: center;
+    }
+}
+
+//FOOTER-RESIDENTIAL
+.footer-residential {
+    background-color: #101d2c;
+    grid-column: full-start / full-end;
+    padding: 8rem 8rem 1.5rem;
+    margin-top: 10rem;
+
+    @media only screen and (max-width: $bp-small) {
+        text-align: center;
+    }
+
+    &-logo {
+       
+    }
+    p {
+        font-size: 1.5rem;
+        font-family: $font-secondary;
+        color: $color-grey-light-2;
+
+        // @media only screen and (max-width: $bp-medium) {
+        //     font-size: 1.7rem;
+        // }
+    }
+    h4 {
+        font-size: 2rem;
+        font-family: $font-display;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 2rem;
+            margin: 2rem 0;
+        }
+    }
+    .fa {
+
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        margin: 0rem 1rem;
+    }
+       .copyright{
+        text-align: center;
+    }
+}
+//FOOTER-CONTACT
+.footer-contact {
+    background-color: #101d2c;
+    grid-column: full-start / full-end;
+    padding: 8rem 8rem 1.5rem;
+
+    @media only screen and (max-width: $bp-small) {
+        text-align: center;
+    }
+
+    &-logo {
+       
+    }
+   p {
+        font-size: 1.5rem;
+        font-family: $font-secondary;
+        color: $color-grey-light-2;
+
+        // @media only screen and (max-width: $bp-medium) {
+        //     font-size: 1.7rem;
+        // }
+    }
+    h4 {
+        font-size: 2rem;
+        font-family: $font-display;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 2rem;
+            margin: 2rem 0;
+        }
+    }
+    .fa {
+
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        margin: 0rem 1rem;
+    }
+       .copyright{
+        text-align: center;
+    }
+}

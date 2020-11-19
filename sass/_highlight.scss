@@ -1,0 +1,40 @@
+.highlight {
+    background-color: rgba($color-secondary, .93);
+    grid-column: col-start 6 / full-end;
+    padding: 7rem 3rem 3rem;
+    display: grid;
+    align-content: start;
+    justify-content: center;
+    justify-items: center;
+    grid-row-gap: 2rem;
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-column: 1 / -1;
+        background: linear-gradient(to right, #141e30, #243b55);
+        padding: 7rem 3rem 7rem;
+        margin-bottom: 10rem;
+    }
+
+    table{
+        color: $color-grey-light-2;
+        font-size: 1.5rem;
+        font-family: $font-secondary;
+        transition: all .2s;
+        margin-top: 1.5rem;
+    }
+
+    th, td {
+        padding: 5px;
+    }
+    th {
+        font-family: $font-display;
+        font-size: 1.3rem;
+        color: $color-primary;
+    }
+
+    .table--animated{
+        animation: moveInBottom .5s ease-out .75s;
+        animation-fill-mode: backwards;
+    }
+}
+

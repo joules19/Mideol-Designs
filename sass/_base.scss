@@ -1,0 +1,234 @@
+// COLOR VARIABLES
+$color-primary: #c69963;
+$color-primary-dark: #B28451;
+
+$color-tertiary: #ffd194;
+$color-tertiary-dark: #d1913c;
+
+$color-secondary: #101d2c;
+$color-white: #fff;
+
+$color-grey-light-1: #f9f7f6;
+$color-grey-light-2: #aaa;
+
+$color-grey-dark-1: #54483A;
+$color-grey-dark-2: #6D5D4B;
+
+// FONT VARIABLES
+$font-primary: 'Nunito', sans-serif;
+$font-display: 'Josefin Sans', sans-serif;
+$font-secondary: 'Bellefair', serif;
+$font-sm: 1.8rem;
+$font-bg: 2.5rem;
+
+.lowercase{
+    text-transform: lowercase;
+}
+
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 75em;   // 1200px
+$bp-large: 62.5em;   // 1000px
+$bp-medium: 50em;    // 800px;
+$bp-small: 37.5em;    // 600px;
+$bp-tiny: 23.5em;    // 375px;
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+
+    @media only screen and (max-width: $bp-largest) {
+        font-size: 50%;
+    }
+}
+
+body {
+    font-family: $font-primary;
+    color: $color-grey-dark-2;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.container-body {
+    display: grid;
+    grid-template-rows: 80vh min-content 40vw repeat(4, min-content);
+    grid-template-columns: [sidebar-start] 6rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+
+    @media only screen and (max-width: $bp-large) {
+        grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
+        grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-template-rows: 6rem calc(100vh - 74rem);
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        grid-template-rows: 6rem calc(100vh - 46rem);
+    }
+
+    @media only screen and (max-width: $bp-tiny) {
+        grid-template-rows: 6rem calc(100vh - 55rem);
+    }
+}
+
+.container-about {
+    display: grid;
+    grid-template-rows: 100vh min-content min-content 40vw repeat(4, min-content);
+    grid-template-columns: [sidebar-start] 6rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+
+    @media only screen and (max-width: $bp-large) {
+        grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
+        grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-template-rows: 6rem calc(100vh - 74rem);
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        grid-template-rows: 6rem calc(100vh - 58rem);
+    }
+
+    @media only screen and (max-width: $bp-tiny) {
+        grid-template-rows: 6rem calc(100vh -  55rem);
+    }
+}
+
+.container-portfolio {
+    display: grid;
+    grid-template-rows: 100vh repeat(3, 40vw) min-content;
+    grid-template-columns: [sidebar-start] 6rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+    grid-row-gap: 1rem;
+    background-color: $color-grey-light-1;
+
+
+    @media only screen and (max-width: $bp-large) {
+        grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
+        grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-template-rows: 6rem calc(100vh - 74rem);
+        grid-row-gap: 0;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        grid-template-rows: 6rem calc(100vh - 58rem);
+    }
+
+    @media only screen and (max-width: $bp-tiny) {
+        grid-template-rows: 6rem calc(100vh -  55rem);
+    }
+}
+
+.container-residential {
+    display: grid;
+    grid-template-rows: 100vh repeat(4, 30vw) max-content;
+    grid-template-columns: [sidebar-start] 6rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+    grid-row-gap: 1rem;
+    background-color: $color-grey-light-1;
+
+
+    @media only screen and (max-width: $bp-large) {
+        grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
+        grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-template-rows: 6rem calc(100vh - 74rem);
+        grid-row-gap: 0;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        grid-template-rows: 6rem calc(100vh - 58rem);
+    }
+
+    @media only screen and (max-width: $bp-tiny) {
+        grid-template-rows: 6rem calc(100vh -  55rem);
+    }
+}
+.container-commercial {
+    display: grid;
+    grid-template-rows: 100vh repeat(2, 30vw) max-content;
+    grid-template-columns: [sidebar-start] 6rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+    grid-row-gap: 1rem;
+    background-color: $color-grey-light-1;
+
+
+    @media only screen and (max-width: $bp-large) {
+        grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
+        grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-template-rows: 6rem calc(100vh - 74rem);
+        grid-row-gap: 0;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        grid-template-rows: 6rem calc(100vh - 58rem);
+    }
+
+    @media only screen and (max-width: $bp-tiny) {
+        grid-template-rows: 6rem calc(100vh -  55rem);
+    }
+}
+
+.container-page {
+    display: grid;
+    grid-template-rows: 100vh 45vw 10rem repeat(2, min-content);
+    grid-template-columns: [sidebar-start] 6rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+    background-color: $color-grey-light-1;
+
+
+    @media only screen and (max-width: $bp-large) {
+        grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
+        grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-template-rows: 6rem calc(100vh - 74rem);
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        grid-template-rows: 6rem calc(100vh - 58rem);
+    }
+
+    @media only screen and (max-width: $bp-tiny) {
+        grid-template-rows: 6rem calc(100vh -  55rem);
+    }
+}
+
+.container-contact {
+    display: grid;
+    grid-template-rows: 100vh 50vw min-content;
+    grid-template-columns: [sidebar-start] 6rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+    background-color: $color-grey-light-1;
+
+
+    @media only screen and (max-width: $bp-large) {
+        grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
+        grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-template-rows: 6rem calc(100vh - 74rem);
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        grid-template-rows: 6rem calc(100vh - 58rem);
+    }
+
+    @media only screen and (max-width: $bp-tiny) {
+        grid-template-rows: 6rem calc(100vh -  55rem);
+    }
+}
+

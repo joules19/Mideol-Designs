@@ -1,0 +1,183 @@
+%heading{
+    font-family: $font-display;
+    font-weight: 400;
+}
+
+.heading-1{
+    @extend %heading;
+    font-size: 4.5rem;
+    line-height: 1;
+    color: $color-grey-light-1;
+}
+
+.heading-2{
+    @extend %heading;
+    font-size: 4rem;
+    font-style: italic;
+    line-height: 1;
+
+    &--light{
+        color: $color-grey-light-1;
+    }
+    &--dark{
+        color: $color-grey-dark-1;
+    }
+}
+
+.heading-3{
+    @extend %heading;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: $color-primary;
+
+    @media only screen and (max-width: $bp-tiny) {
+        font-size: 2rem;
+    }
+
+    &--animated{
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+  }
+}
+
+.port-lg{
+    @extend %heading;
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: $color-primary;
+
+    &--animated{
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+  }
+}
+
+.heading-colored {
+     color: transparent;
+     background-image: linear-gradient(to right, $color-tertiary-dark, $color-grey-light-1);
+     -webkit-background-clip: text;
+}
+
+
+.heading-4{
+    @extend %heading;   
+    font-size: 2rem;
+    font-family: $font-display;
+
+    @media only screen and (max-width: $bp-medium) {
+        font-size: 2.5rem;
+    }
+    @media only screen and (max-width: $bp-small) {
+        font-size: 2rem;
+    }
+
+    &--light{
+        color: $color-grey-light-1;
+    }
+    &--dark{
+        color: $color-primary;
+    }
+}
+
+.btn {
+    background-color: $color-primary;
+    color: #fff;
+    border: none;
+    border-radius: 0;
+    font-family: $font-display;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding: 1.5rem 2rem;
+    cursor: pointer;
+    margin-top: 2rem;
+    transition: all .2s;
+
+    &:hover {
+        background-color: $color-primary-dark;
+        transform: translateY(-1px);
+    }
+}
+
+ .home__btn{
+        
+    @media only screen and (max-width: $bp-small) {
+        padding: 1.5rem 1rem;
+       
+    }
+}
+ .realtor__btn{
+    
+    @media only screen and (max-width: $bp-small) {
+        margin: 2.5rem auto 2rem;
+        padding: 1.5rem 1.5rem;
+}    
+
+}
+.story__btn{
+
+    @media only screen and (max-width: $bp-small) {
+        margin: 2.5rem auto 2rem;
+        padding: 1.5rem 1.5rem;
+    }
+
+    
+
+    &--animated{
+        animation: moveInBottom .5s ease-out .75s;
+        animation-fill-mode: backwards;
+    }
+}
+.form__btn {
+    background-color: #c69963;
+    color: #fff;
+    border: none;
+    border-radius: 0;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    padding: 1rem 1rem;
+    cursor: pointer;
+    margin-top: 2rem;
+    transition: all .2s;
+    width: 8rem;
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 1rem;
+        font-size: 1.2rem;
+        width: 10rem;
+    }
+
+    &:hover {
+        background-color: $color-primary-dark;
+        transform: translateY(-1px);
+    }
+
+    &--animated{
+        animation: moveInBottom .5s ease-out .75s;
+        animation-fill-mode: backwards;
+    }
+}
+
+.mb-sm {
+    margin-bottom: 2rem;
+}
+.mb-md {
+    margin-bottom:3rem;
+}
+.mb-lg {
+    margin-bottom: 4rem;
+}
+.mb-hg {
+    margin-bottom: 8rem;
+}
+
+.mt-sm {
+    margin-top: 2rem;
+}
+
+#dark {
+    color: $color-primary;
+    font-family: $font-display;
+}
